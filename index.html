@@ -458,13 +458,61 @@
         </div>
       </div>
     </footer>
-    <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop" data-modal>
       <div class="overlay">
         <button class="overlay-btn" data-modal-close>
           <svg class="overlay-svg">
             <use href="images/svg/icons.svg#icon-modal-close"></use>
           </svg>
         </button>
+        <form class="modal-form">
+          <p class="modal-text">Оставьте свои данные, мы вам перезвоним</p>
+          <label class="modal-label"
+            ><span class="modal-label-desc">Имя</span
+            ><input
+              name="user_name"
+              type="text"
+              class="modal-input"
+              required
+              minlength="2"
+          /></label>
+          <label class="modal-label"
+            ><span class="modal-label-desc">Телефон</span
+            ><input
+              name="user_phone"
+              type="tel"
+              class="modal-input"
+              required
+              pattern="[0-9]{2}-[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}"
+              title="xx-xxx-xxx-xx-xx"
+          /></label>
+          <label class="modal-label"
+            ><span class="modal-label-desc">Почта</span
+            ><input name="user_email" type="email" class="modal-input" required
+          /></label>
+          <label class="modal-label"
+            ><span class="modal-label-desc">Комментарий</span
+            ><textarea
+              name="user_message"
+              class="modal-comment"
+              placeholder="Введите текст"
+            ></textarea>
+          </label>
+          <input
+            id="user_policy"
+            name="user_policy"
+            type="checkbox"
+            class="modal-check"
+            required
+          />
+          <label for="user_policy" class="modal-label-check-desc"
+            >Соглашаюсь с рассылкой и принимаю
+            <a class="link-policy" href="">Условия договора</a></label
+          >
+          <button type="submit" class="button-modal-submit hero-button">
+            Отправить
+          </button>
+        </form>
       </div>
     </div>
     <script src="./js/modal.js"></script>
