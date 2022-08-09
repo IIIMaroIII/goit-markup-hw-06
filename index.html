@@ -456,9 +456,32 @@
             </li>
           </ul>
         </div>
+        <form class="footer-form">
+          <p class="section-title footer-form-text">Подпишитесь на рассылку</p>
+
+          <div class="sigh-up">
+            <input
+              name="user_email"
+              type="text"
+              class="footer-form-input"
+              placeholder="E-mail"
+            />
+            <span class="footer-form-wrapper">
+              <button
+                class="button-modal-submit hero-button button-sigh-up"
+                type="submit"
+              >
+                Подписаться
+              </button>
+              <svg class="footer-button-modal-icon">
+                <use href="./images/svg/icons.svg#icon-sign-up"></use>
+              </svg>
+            </span>
+          </div>
+        </form>
       </div>
     </footer>
-    <div class="backdrop" data-modal>
+    <div class="backdrop is-hidden" data-modal>
       <div class="overlay">
         <button class="overlay-btn" data-modal-close>
           <svg class="overlay-svg">
@@ -467,30 +490,52 @@
         </button>
         <form class="modal-form">
           <p class="modal-text">Оставьте свои данные, мы вам перезвоним</p>
-          <label class="modal-label"
-            ><span class="modal-label-desc">Имя</span
-            ><input
-              name="user_name"
-              type="text"
-              class="modal-input"
-              required
-              minlength="2"
-          /></label>
-          <label class="modal-label"
-            ><span class="modal-label-desc">Телефон</span
-            ><input
-              name="user_phone"
-              type="tel"
-              class="modal-input"
-              required
-              pattern="[0-9]{2}-[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}"
-              title="xx-xxx-xxx-xx-xx"
-          /></label>
-          <label class="modal-label"
-            ><span class="modal-label-desc">Почта</span
-            ><input name="user_email" type="email" class="modal-input" required
-          /></label>
-          <label class="modal-label"
+          <label class="modal-label">
+            <span class="modal-label-desc">Имя</span>
+            <span class="modal-icon-wrapper">
+              <input
+                name="user_name"
+                type="text"
+                class="modal-input"
+                required
+                minlength="2"
+              />
+              <svg class="modal-icon">
+                <use href="./images/svg/icons.svg#icon-person-black"></use>
+              </svg>
+            </span>
+          </label>
+          <label class="modal-label">
+            <span class="modal-label-desc">Телефон</span>
+            <span class="modal-icon-wrapper">
+              <input
+                name="user_phone"
+                type="tel"
+                class="modal-input"
+                required
+                pattern="[0-9]{2}-[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}"
+                title="xx-xxx-xxx-xx-xx"
+              />
+              <svg class="modal-icon">
+                <use href="./images/svg/icons.svg#icon-phone-black"></use>
+              </svg>
+            </span>
+          </label>
+          <label class="modal-label">
+            <span class="modal-label-desc">Почта</span>
+            <span class="modal-icon-wrapper">
+              <input
+                name="user_email"
+                type="email"
+                class="modal-input"
+                required
+              />
+              <svg class="modal-icon">
+                <use href="./images/svg/icons.svg#icon-email-black"></use>
+              </svg>
+            </span>
+          </label>
+          <label class="modal-label-comment"
             ><span class="modal-label-desc">Комментарий</span
             ><textarea
               name="user_message"
@@ -498,17 +543,17 @@
               placeholder="Введите текст"
             ></textarea>
           </label>
-          <input
-            id="user_policy"
-            name="user_policy"
-            type="checkbox"
-            class="modal-check"
-            required
-          />
-          <label for="user_policy" class="modal-label-check-desc"
-            >Соглашаюсь с рассылкой и принимаю
-            <a class="link-policy" href="">Условия договора</a></label
-          >
+
+          <span class="checkbox-wrapper">
+            <input class="checkbox" id="user-policy" type="checkbox" />
+            <label class="label-checkbox" for="user-policy"
+              >Соглашаюсь с рассылкой и принимаю&nbsp;<a
+                href=""
+                class="modal-link-policy"
+                >Условия договора</a
+              ></label
+            >
+          </span>
           <button type="submit" class="button-modal-submit hero-button">
             Отправить
           </button>
